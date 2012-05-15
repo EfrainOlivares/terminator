@@ -174,11 +174,11 @@ end
  end
 
   if matched_tag
-    if svr.cloud_id.to_i  != 1
-      puts "Server not on cloud region 1: Skipping" if debug 
-      rows << [total_servers.to_s, svr.nickname.to_s, server_state,  "off", server_id, "unlocked", "Not on 1"]
-      next
-    end
+#    if svr.cloud_id.to_i  != 1
+#      puts "Server not on cloud region 1: Skipping" if debug 
+#      rows << [total_servers.to_s, svr.nickname.to_s, server_state,  "off", server_id, "unlocked", "Region " + svr.cloud_id.to_s]
+#      next
+#    end
     life_time = tag_timestamp + (terminate_after_hours * 60 * 60) 
     current_time = Time.now
     if (current_time > life_time)
