@@ -108,7 +108,13 @@ total_servers_operational = 0
 
   if svr.nickname.downcase.include?("virtualmonkey")
     puts "Has virtualmonkey in name: NEXT" if debug
-    rows << [total_servers.to_s, svr.nickname.to_s, server_state, "VMK", "--", "--", "--"]
+    rows << [total_servers.to_s, svr.nickname.to_s, server_state, "virtualmonkey", "--", "--", "--"]
+    next
+  end
+
+  if svr.nickname.downcase.include?("monkey")
+    puts "Has monkey in name: NEXT" if debug
+    rows << [total_servers.to_s, svr.nickname.to_s, server_state, "monkey", "--", "--", "--"]
     next
   end
 
